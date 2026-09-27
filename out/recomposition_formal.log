@@ -1,0 +1,244 @@
+[recomposition] method=mono seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10609
+  step 2000/20000 loss=0.0736 bc=0.0736 (45s)
+  step 4000/20000 loss=0.0451 bc=0.0451 (90s)
+  step 6000/20000 loss=0.0181 bc=0.0181 (135s)
+  step 8000/20000 loss=0.0352 bc=0.0352 (179s)
+  step 10000/20000 loss=0.0171 bc=0.0171 (224s)
+  step 12000/20000 loss=0.0116 bc=0.0116 (267s)
+  step 14000/20000 loss=0.0131 bc=0.0131 (311s)
+  step 16000/20000 loss=0.0138 bc=0.0138 (356s)
+  step 18000/20000 loss=0.0135 bc=0.0135 (400s)
+  step 20000/20000 loss=0.0062 bc=0.0062 (444s)
+   L_cup        38/50
+   L_box        44/50
+   L_mug        48/50
+   R_cake       33/50
+   R_stir       50/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (466s)
+[recomposition] method=twin seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10609
+  step 2000/20000 loss=0.0685 bc=0.0685 (89s)
+  step 4000/20000 loss=0.0447 bc=0.0447 (179s)
+  step 6000/20000 loss=0.0163 bc=0.0163 (268s)
+  step 8000/20000 loss=0.0203 bc=0.0203 (358s)
+  step 10000/20000 loss=0.0172 bc=0.0172 (447s)
+  step 12000/20000 loss=0.0114 bc=0.0114 (537s)
+  step 14000/20000 loss=0.0128 bc=0.0128 (626s)
+  step 16000/20000 loss=0.0131 bc=0.0131 (714s)
+  step 18000/20000 loss=0.0128 bc=0.0128 (804s)
+  step 20000/20000 loss=0.0061 bc=0.0061 (893s)
+   L_cup        13/50
+   L_box        48/50
+   L_mug        46/50
+   R_cake       16/50
+   R_stir       48/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (924s)
+[recomposition] method=skillvla seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10609
+  step 2000/20000 loss=0.0925 bc=0.0922 l_on=0.0922 l_off=0.0922 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (144s)
+  step 4000/20000 loss=0.0712 bc=0.0709 l_on=0.0709 l_off=0.0709 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (288s)
+  step 6000/20000 loss=0.0449 bc=0.0446 l_on=0.0446 l_off=0.0446 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (433s)
+  step 8000/20000 loss=0.0329 bc=0.0326 l_on=0.0326 l_off=0.0326 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (578s)
+  step 10000/20000 loss=0.0351 bc=0.0348 l_on=0.0348 l_off=0.0348 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (722s)
+  step 12000/20000 loss=0.0291 bc=0.0288 l_on=0.0288 l_off=0.0288 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (865s)
+  step 14000/20000 loss=0.0305 bc=0.0302 l_on=0.0302 l_off=0.0302 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1010s)
+  step 16000/20000 loss=0.0243 bc=0.0240 l_on=0.0240 l_off=0.0240 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1157s)
+  step 18000/20000 loss=0.0245 bc=0.0242 l_on=0.0242 l_off=0.0242 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1302s)
+  step 20000/20000 loss=0.0217 bc=0.0214 l_on=0.0214 l_off=0.0214 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1446s)
+   L_cup        39/50 gate_on=0.00
+   L_box        48/50 gate_on=0.00
+   L_mug        49/50 gate_on=0.00
+   R_cake       31/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      45/50 gate_on=0.00
+   cupxcake     15/50 gate_on=0.00
+   cupxstir     38/50 gate_on=0.00
+   cupxsmash    23/50 gate_on=0.00
+   boxxcake     21/50 gate_on=0.00
+   boxxstir     47/50 gate_on=0.00
+   boxxsmash    8/50 gate_on=0.00
+   mugxcake     6/50 gate_on=0.00
+   mugxstir     41/50 gate_on=0.00
+   mugxsmash    30/50 gate_on=0.00
+   (1475s)
+[recomposition] method=mono seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10622
+  step 2000/20000 loss=0.0739 bc=0.0739 (44s)
+  step 4000/20000 loss=0.0464 bc=0.0464 (89s)
+  step 6000/20000 loss=0.0291 bc=0.0291 (133s)
+  step 8000/20000 loss=0.0250 bc=0.0250 (178s)
+  step 10000/20000 loss=0.0146 bc=0.0146 (222s)
+  step 12000/20000 loss=0.0101 bc=0.0101 (267s)
+  step 14000/20000 loss=0.0142 bc=0.0142 (312s)
+  step 16000/20000 loss=0.0143 bc=0.0143 (356s)
+  step 18000/20000 loss=0.0128 bc=0.0128 (400s)
+  step 20000/20000 loss=0.0180 bc=0.0180 (445s)
+   L_cup        1/50
+   L_box        50/50
+   L_mug        49/50
+   R_cake       18/50
+   R_stir       50/50
+   R_smash      46/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (467s)
+[recomposition] method=twin seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10622
+  step 2000/20000 loss=0.0707 bc=0.0707 (91s)
+  step 4000/20000 loss=0.0603 bc=0.0603 (182s)
+  step 6000/20000 loss=0.0383 bc=0.0383 (272s)
+  step 8000/20000 loss=0.0277 bc=0.0277 (359s)
+  step 10000/20000 loss=0.0156 bc=0.0156 (449s)
+  step 12000/20000 loss=0.0102 bc=0.0102 (538s)
+  step 14000/20000 loss=0.0143 bc=0.0143 (628s)
+  step 16000/20000 loss=0.0143 bc=0.0143 (717s)
+  step 18000/20000 loss=0.0132 bc=0.0132 (807s)
+  step 20000/20000 loss=0.0178 bc=0.0178 (896s)
+   L_cup        5/50
+   L_box        49/50
+   L_mug        47/50
+   R_cake       12/50
+   R_stir       50/50
+   R_smash      45/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (927s)
+[recomposition] method=skillvla seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10622
+  step 2000/20000 loss=1.2340 bc=0.1221 l_on=0.1221 l_off=0.1221 y_frac=0.4414 gate_frac=0.0000 l_disc=0.7966 l_prior=0.2593 (144s)
+  step 4000/20000 loss=1.3845 bc=0.0895 l_on=0.0893 l_off=0.0895 y_frac=0.5938 gate_frac=0.0000 l_disc=0.9741 l_prior=0.2644 (285s)
+  step 6000/20000 loss=1.3997 bc=0.0534 l_on=0.0533 l_off=0.0534 y_frac=0.6367 gate_frac=0.0000 l_disc=1.0254 l_prior=0.2644 (429s)
+  step 8000/20000 loss=1.4847 bc=0.0443 l_on=0.0441 l_off=0.0443 y_frac=0.7109 gate_frac=0.0000 l_disc=1.1254 l_prior=0.2590 (573s)
+  step 10000/20000 loss=1.2045 bc=0.0355 l_on=0.0355 l_off=0.0355 y_frac=0.4883 gate_frac=0.0000 l_disc=0.8520 l_prior=0.2608 (716s)
+  step 12000/20000 loss=1.1901 bc=0.0305 l_on=0.0304 l_off=0.0305 y_frac=0.4805 gate_frac=0.0000 l_disc=0.8484 l_prior=0.2556 (860s)
+  step 14000/20000 loss=0.8805 bc=0.0271 l_on=0.0272 l_off=0.0271 y_frac=0.2383 gate_frac=0.0000 l_disc=0.5500 l_prior=0.2485 (1003s)
+  step 16000/20000 loss=1.1977 bc=0.0256 l_on=0.0256 l_off=0.0256 y_frac=0.4883 gate_frac=0.0000 l_disc=0.8840 l_prior=0.2347 (1147s)
+  step 18000/20000 loss=1.0488 bc=0.0243 l_on=0.0244 l_off=0.0243 y_frac=0.3789 gate_frac=0.0000 l_disc=0.7450 l_prior=0.2270 (1290s)
+  step 20000/20000 loss=1.0400 bc=0.0269 l_on=0.0270 l_off=0.0269 y_frac=0.3711 gate_frac=0.0000 l_disc=0.7366 l_prior=0.2244 (1434s)
+   L_cup        10/50 gate_on=0.00
+   L_box        46/50 gate_on=0.00
+   L_mug        42/50 gate_on=0.00
+   R_cake       40/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      49/50 gate_on=0.00
+   cupxcake     5/50 gate_on=0.00
+   cupxstir     4/50 gate_on=0.00
+   cupxsmash    4/50 gate_on=0.00
+   boxxcake     20/50 gate_on=0.00
+   boxxstir     38/50 gate_on=0.00
+   boxxsmash    7/50 gate_on=0.00
+   mugxcake     28/50 gate_on=0.00
+   mugxstir     37/50 gate_on=0.00
+   mugxsmash    16/50 gate_on=0.00
+   (1463s)
+[recomposition] method=mono seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10625
+  step 2000/20000 loss=0.0589 bc=0.0589 (44s)
+  step 4000/20000 loss=0.0369 bc=0.0369 (89s)
+  step 6000/20000 loss=0.0222 bc=0.0222 (133s)
+  step 8000/20000 loss=0.0228 bc=0.0228 (177s)
+  step 10000/20000 loss=0.0115 bc=0.0115 (222s)
+  step 12000/20000 loss=0.0170 bc=0.0170 (264s)
+  step 14000/20000 loss=0.0188 bc=0.0188 (309s)
+  step 16000/20000 loss=0.0098 bc=0.0098 (353s)
+  step 18000/20000 loss=0.0097 bc=0.0097 (397s)
+  step 20000/20000 loss=0.0102 bc=0.0102 (442s)
+   L_cup        26/50
+   L_box        48/50
+   L_mug        49/50
+   R_cake       28/50
+   R_stir       50/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    5/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (463s)
+[recomposition] method=twin seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10625
+  step 2000/20000 loss=0.0575 bc=0.0575 (90s)
+  step 4000/20000 loss=0.0470 bc=0.0470 (179s)
+  step 6000/20000 loss=0.0323 bc=0.0323 (269s)
+  step 8000/20000 loss=0.0216 bc=0.0216 (360s)
+  step 10000/20000 loss=0.0110 bc=0.0110 (444s)
+  step 12000/20000 loss=0.0165 bc=0.0165 (489s)
+  step 14000/20000 loss=0.0177 bc=0.0177 (577s)
+  step 16000/20000 loss=0.0094 bc=0.0094 (668s)
+  step 18000/20000 loss=0.0095 bc=0.0095 (758s)
+  step 20000/20000 loss=0.0103 bc=0.0103 (848s)
+   L_cup        39/50
+   L_box        47/50
+   L_mug        50/50
+   R_cake       27/50
+   R_stir       49/50
+   R_smash      48/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     3/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (878s)
+[recomposition] method=skillvla seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=10625
+  step 2000/20000 loss=0.1219 bc=0.1216 l_on=0.1216 l_off=0.1216 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (101s)
+  step 4000/20000 loss=0.0515 bc=0.0512 l_on=0.0512 l_off=0.0512 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (221s)
+  step 6000/20000 loss=0.0400 bc=0.0397 l_on=0.0397 l_off=0.0397 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (365s)
+  step 8000/20000 loss=0.0309 bc=0.0306 l_on=0.0306 l_off=0.0306 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (509s)
+  step 10000/20000 loss=0.0356 bc=0.0353 l_on=0.0353 l_off=0.0353 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (621s)
+  step 12000/20000 loss=0.0298 bc=0.0295 l_on=0.0295 l_off=0.0295 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (727s)
+  step 14000/20000 loss=0.0154 bc=0.0151 l_on=0.0151 l_off=0.0151 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (871s)
+  step 16000/20000 loss=0.0189 bc=0.0186 l_on=0.0186 l_off=0.0186 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1015s)
+  step 18000/20000 loss=0.0222 bc=0.0219 l_on=0.0219 l_off=0.0219 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1143s)
+  step 20000/20000 loss=0.0271 bc=0.0268 l_on=0.0268 l_off=0.0268 y_frac=0.0000 gate_frac=0.0000 l_disc=0.0001 l_prior=0.0001 (1263s)
+   L_cup        24/50 gate_on=0.00
+   L_box        47/50 gate_on=0.00
+   L_mug        50/50 gate_on=0.00
+   R_cake       33/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      50/50 gate_on=0.00
+   cupxcake     16/50 gate_on=0.00
+   cupxstir     29/50 gate_on=0.00
+   cupxsmash    20/50 gate_on=0.00
+   boxxcake     21/50 gate_on=0.00
+   boxxstir     46/50 gate_on=0.00
+   boxxsmash    29/50 gate_on=0.00
+   mugxcake     23/50 gate_on=0.00
+   mugxstir     46/50 gate_on=0.00
+   mugxsmash    40/50 gate_on=0.00
+   (1292s)
+wrote /home/mars/Desktop/sunianbing/skillvla_repro/scripts/../results/recomposition.json

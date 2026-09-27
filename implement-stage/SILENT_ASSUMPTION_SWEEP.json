@@ -1,0 +1,193 @@
+{
+  "round_1": {
+    "round": 1,
+    "reviewer": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "sandbox": "read-only",
+      "threadId": "01a0d831-a443-7882-84d0-f7c3aa20d594"
+    },
+    "reply_verbatim": {
+      "undeclared": [
+        {
+          "site": "skillvla/data.py:23-36",
+          "decision": "Discard unsuccessful expert episodes and keep sampling until 50 successful demonstrations are collected.",
+          "why_it_matters": "A-010 does not specify success-conditioned collection. The dataset excludes expert failure cases. Replaying the 900 formal recomposition demonstrations found no rejected episodes, so this choice did not filter that particular dataset.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/data.py:52-59,73-78; skillvla/models.py:287",
+          "decision": "Sample uniformly over frames, using every frame as a chunk start and normalizing each chunk loss by its remaining valid length.",
+          "why_it_matters": "Equal demonstration counts do not mean equal task or episode weights. Formal seed-0 Stir demonstrations average 46.46 frames versus 20.68 for Smash. Overlapping, shortened terminal chunks also determine how frequently individual actions contribute to training.",
+          "class": "semantic"
+        },
+        {
+          "site": "scripts/run.py:67-84; skillvla/data.py:25; skillvla/evaluate.py:21-26; scripts/check_results.py:32-49",
+          "decision": "Each reported training seed also changes the demonstration dataset, evaluation scenes, and action-sampling randomness. Reports use equal-weight cell averages and population standard deviation across seeds.",
+          "why_it_matters": "A-011's seed variation therefore combines data, training, and evaluation variation; it does not isolate training randomness on a fixed benchmark. The exact aggregation and standard-deviation convention are undeclared.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/env.py:59,204-206,323-334",
+          "decision": "Allow 100 steps for independent tasks and 120 for cooperative tasks; terminate Align immediately when both recorded releases fail its success conditions.",
+          "why_it_matters": "Success rates incorporate fixed time budgets and an unrecoverable Align placement failure. A-012 mentions a horizon but neither specifies these budgets nor declares that a failed placement cannot be corrected within the remaining time.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/env.py:195-202,210-228",
+          "decision": "Attempt grasping only on an open-to-closed transition, snap held objects to the end effector, and place released objects immediately at table height using their previous stored horizontal position.",
+          "why_it_matters": "Grasp recovery requires reopening, and releasing from any height creates an immediate grounded placement without a fall or settling period. These mechanics determine what geometric placement success means beyond the declared planar-simulation abstraction.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/env.py:67,152-153,193; skillvla/models.py:18,202,264-265",
+          "decision": "Include the previous clipped movement command in each arm's seven-dimensional state, alongside position and gripper state.",
+          "why_it_matters": "The policy receives action history, not just current proprioception. A-009 specifies whose state is available but does not declare this temporal information.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/flow.py:29-30; skillvla/models.py:178-180,219-221,284-300",
+          "decision": "Mono and Twin average squared error across eight action coordinates; SkillVLA variants sum two separate four-coordinate means.",
+          "why_it_matters": "Identical coordinate errors produce twice the reported BC loss for SkillVLA variants. BC logs are not directly comparable across methods, and their normalization relative to other loss terms and global gradient clipping differs.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/evaluate.py:33-45",
+          "decision": "Compute gate_on_fraction by averaging gate decisions within each episode and then weighting episodes equally.",
+          "why_it_matters": "This is an episode-weighted fraction of chunk decisions, not the fraction of executed timesteps with communication enabled. Short and long episodes contribute equally, including chunks terminated early.",
+          "class": "semantic"
+        },
+        {
+          "site": "scripts/run.py:104-117; scripts/check_results.py:19-28",
+          "decision": "Treat the result file's own method list, seed list, and evaluation count as the completeness contract; custom reduced runs can write to results/ without --pilot.",
+          "why_it_matters": "Passing the checker does not establish completion of the declared three-seed protocol or all required methods. Both existing one-seed pilot artifacts pass check(). The saved formal recomposition artifact also passes and does contain the declared methods, seeds, and counts.",
+          "class": "semantic"
+        },
+        {
+          "site": "scripts/diagnose.py:31-37; scripts/run.py:39-45",
+          "decision": "Construct diagnostic models before setting the training seed, and construct smoke models without setting an initialization seed.",
+          "why_it_matters": "These training paths do not reproduce model initialization under the stated fixed-seed setup. Diagnostic results informed the documented benchmark revisions. The formal experiment path correctly seeds before model construction.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/env.py:20,66,84-89,106-108,120-123",
+          "decision": "Use narrowly specified scene distributions: fixed home positions with small jitter, side-specific object ranges and separation constraints, and fixed horizontal centers and gaps for Shake/Ball.",
+          "why_it_matters": "The reported generalization is over these particular layout distributions. A-002 declares the geometric skill analogues but not these sampling restrictions, which define the population represented by success/n.",
+          "class": "semantic"
+        },
+        {
+          "site": "scripts/run.py:76-80,106; skillvla/train.py:8-19",
+          "decision": "Train for 20,000 updates with batch size 256, AdamW at 3e-4, weight decay 1e-4, OneCycleLR, bf16 autocast, and gradient clipping at 1.0; evaluate the final checkpoint.",
+          "why_it_matters": "This undeclared training and checkpoint-selection recipe is needed to reproduce the comparison. The ledger records loss coefficients and model capacity but not this recipe.",
+          "class": "interface"
+        }
+      ],
+      "stale_rows": [
+        {
+          "id": "A-002, color revision",
+          "site": "implement-stage/ASSUMPTIONS.md:34; skillvla/env.py:38,174",
+          "stated_choice": "Every object color has RGB distance at least 180 from both end-effector colors.",
+          "actual_choice": "The container color (40,80,255) has distance approximately 179.51 from the left end-effector color (0,255,255).",
+          "why_it_matters": "The numerical guarantee is false. This small discrepancy alone does not establish visual confusion or invalidate results.",
+          "class": "interface"
+        },
+        {
+          "id": "A-002, Stir definition",
+          "site": "implement-stage/ASSUMPTIONS.md:33; skillvla/env.py:275-284",
+          "stated_choice": "Stir means descending over the bowl and drawing a circle.",
+          "actual_choice": "Success accumulates absolute angular changes, including reversals, without requiring a completed circuit.",
+          "why_it_matters": "A valid-action simulator probe succeeded by moving back and forth across the bowl diameter. A Stir success therefore need not represent the declared circular motion.",
+          "class": "semantic"
+        },
+        {
+          "id": "A-004",
+          "site": "implement-stage/ASSUMPTIONS.md:9,37; skillvla/env.py:66,77-81,350-351,376-379",
+          "stated_choice": "The idle arm remains stationary at home, with distractor_prob=0.0 configurable through configs/*.yaml.",
+          "actual_choice": "The idle side correctly has no objects, but the arm starts with position jitter and executes noisy home-seeking actions. No distractor_prob setting or configs/*.yaml implementation exists.",
+          "why_it_matters": "Idle demonstrations contain nonzero movement targets, and the documented configuration mechanism cannot change the scene choice.",
+          "class": "semantic"
+        },
+        {
+          "id": "A-009",
+          "site": "implement-stage/ASSUMPTIONS.md:14; skillvla/models.py:196-207",
+          "stated_choice": "Both Mono and Twin use concatenated two-arm state inputs.",
+          "actual_choice": "Mono receives both states directly. Each Twin prefix initially receives only its own arm's state and obtains information about the other state through cross-stream attention.",
+          "why_it_matters": "Twin still has access to both states, but the declared direct input structure differs from the implemented communication-mediated structure.",
+          "class": "semantic"
+        },
+        {
+          "id": "A-012",
+          "site": "implement-stage/ASSUMPTIONS.md:17; skillvla/env.py:246-247,336-342",
+          "stated_choice": "Single-arm success requires the active skill to succeed and the idle arm not to have touched objects.",
+          "actual_choice": "The idle check examines only current distance from home: horizontal distance below 0.10 and vertical difference below 0.2. It does not track contact history.",
+          "why_it_matters": "Harmless displacement can prevent success, while returning home after contact is not rejected because of that contact. The implemented metric measures endpoint proximity rather than non-interference.",
+          "class": "semantic"
+        },
+        {
+          "id": "A-013",
+          "site": "implement-stage/ASSUMPTIONS.md:18; skillvla/env.py:188,350-351; skillvla/data.py:17-19,48-58",
+          "stated_choice": "Movement actions are normalized to [-1,1].",
+          "actual_choice": "Expert noise is added after movement limiting. Demonstrations store those raw actions before env.step clips them, so training targets can exceed [-1,1] although executed actions cannot.",
+          "why_it_matters": "Targets differ from the commands actually executed. This occurs in ordinary generated demonstrations; among Shake seeds 0-49, 785 action components exceeded the range, reaching approximately 1.09969.",
+          "class": "semantic"
+        },
+        {
+          "id": "A-017",
+          "site": "implement-stage/ASSUMPTIONS.md:22,40; skillvla/env.py:127-134,300-321,432-442; skillvla/evaluate.py:38",
+          "stated_choice": "Episode-randomized leader tempo creates a need for the follower to observe or communicate with the leader.",
+          "actual_choice": "Shake amplitude/period and Ball velocity control only scripted expert actions. Evaluation supplies both arms' actions directly, and its dynamics and success checks do not enforce the sampled tempo.",
+          "why_it_matters": "Evaluation tests synchronization between policy-controlled arms, not tracking an externally randomized leader. Holding actions fixed while changing the sampled tempo produced identical complete rollouts for both tasks.",
+          "class": "semantic"
+        }
+      ],
+      "semantic_undeclared": 11,
+      "verdict": "gaps"
+    }
+  },
+  "round_2": {
+    "reviewer": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "xhigh",
+      "sandbox": "read-only",
+      "threadId": "01a0d831-a443-7882-84d0-f7c3aa20d594"
+    },
+    "reply": {
+      "undeclared": [
+        {
+          "site": "scripts/run.py:67-85,104-106",
+          "decision": "Eval-only takes the reported training steps and demonstration count from CLI arguments, while loading weights from filenames independent of those arguments and copying training history from the existing output JSON.",
+          "why_it_matters": "These fields need not describe the loaded checkpoint. A read-only control-flow probe produced steps=123 and demos=7 while retaining history ending at step 20000. The checker rejects those particular numbers, but cannot establish checkpoint provenance from protocol-compliant numbers alone. The current regenerated result agrees with the previous artifact and logs; no wrong-checkpoint use was established.",
+          "class": "semantic"
+        },
+        {
+          "site": "skillvla/evaluate.py:26-31,38-40; skillvla/flow.py:34",
+          "decision": "All live episodes share one action-noise generator, with finished episodes removed from subsequent inference batches.",
+          "why_it_matters": "Changing Stir termination changes later noise allocation to surviving episodes. Eval-only therefore reruns trajectories rather than merely rescoring identical ones. This matters in the actual artifacts: SkillVLA seed 2 cupxstir success_L changes from 29 to 31 despite no change to the left-arm criterion. Old/new differences cannot all be interpreted as removing false Stir successes from fixed trajectories.",
+          "class": "semantic"
+        }
+      ],
+      "stale_rows": [
+        {
+          "id": "A-004 Notes",
+          "site": "implement-stage/ASSUMPTIONS.md:9,51; skillvla/env.py:63-82",
+          "stated_choice": "The corrected main row says no distractor_prob configuration exists, but its Notes still instruct changing configs/*.yaml: distractor_prob.",
+          "actual_choice": "Scene construction remains hardcoded; the documented configuration mechanism does not exist.",
+          "why_it_matters": "The behavioral correction is accurate, but the ledger still gives an unusable way to change the experimental condition.",
+          "class": "interface"
+        },
+        {
+          "id": "A-002 / A-012 Stir correction",
+          "site": "implement-stage/ASSUMPTIONS.md:17,44; skillvla/env.py:275-284; tests/test_env.py:87-96",
+          "stated_choice": "The correction prevents back-and-forth motion from counting as a circular Stir.",
+          "actual_choice": "The exact diameter-oscillation probe from round 1 still succeeds. The wrapped-angle formula maps both directions of a 180-degree crossing to -π, and success tests the absolute accumulated angle. After approaching the bowl in a normal seed-0 episode, three horizontal crossings produced success at step 17 with angle approximately -8.273.",
+          "why_it_matters": "The new test passes but does not cover the original counterexample. Signed accumulation fixes ordinary reversals, while the claimed circular-motion requirement remains incomplete. The regenerated results use this still-permissive criterion.",
+          "class": "semantic"
+        }
+      ],
+      "semantic_undeclared": 2,
+      "verdict": "gaps",
+      "resolved_summary": "17 round-1 findings verified resolved (A-024..A-035, A-002 colour note, A-009, A-012 idle semantics, A-013, A-017); A-004 and the Stir repair partially resolved; running cooperative experiment verified unaffected by the reviewed changes. Full per-item 'resolved' list omitted here for length; see thread 01a0d831-a443-7882-84d0-f7c3aa20d594."
+    }
+  },
+  "after_last_round": "Sweep round budget (EFFORT=balanced: 2) exhausted. Fixes made after round 2 (Stir ring/jump rule + explicit-path test, A-004 note, rows A-036/A-037, second eval-only re-evaluation) were verified by the executor and tests only, NOT by the reviewer."
+}

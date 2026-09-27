@@ -1,0 +1,154 @@
+[recomposition] method=mono seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_mono_s0.pt)
+   L_cup        38/50
+   L_box        44/50
+   L_mug        48/50
+   R_cake       33/50
+   R_stir       48/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (21s)
+[recomposition] method=twin seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_twin_s0.pt)
+   L_cup        13/50
+   L_box        48/50
+   L_mug        46/50
+   R_cake       16/50
+   R_stir       46/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (31s)
+[recomposition] method=skillvla seed=0 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_skillvla_s0.pt)
+   L_cup        39/50 gate_on=0.00
+   L_box        48/50 gate_on=0.00
+   L_mug        49/50 gate_on=0.00
+   R_cake       31/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      45/50 gate_on=0.00
+   cupxcake     15/50 gate_on=0.00
+   cupxstir     34/50 gate_on=0.00
+   cupxsmash    23/50 gate_on=0.00
+   boxxcake     21/50 gate_on=0.00
+   boxxstir     47/50 gate_on=0.00
+   boxxsmash    8/50 gate_on=0.00
+   mugxcake     6/50 gate_on=0.00
+   mugxstir     34/50 gate_on=0.00
+   mugxsmash    30/50 gate_on=0.00
+   (29s)
+[recomposition] method=mono seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_mono_s1.pt)
+   L_cup        1/50
+   L_box        50/50
+   L_mug        49/50
+   R_cake       18/50
+   R_stir       50/50
+   R_smash      46/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (21s)
+[recomposition] method=twin seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_twin_s1.pt)
+   L_cup        5/50
+   L_box        49/50
+   L_mug        47/50
+   R_cake       12/50
+   R_stir       50/50
+   R_smash      45/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (31s)
+[recomposition] method=skillvla seed=1 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_skillvla_s1.pt)
+   L_cup        10/50 gate_on=0.00
+   L_box        46/50 gate_on=0.00
+   L_mug        42/50 gate_on=0.00
+   R_cake       40/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      49/50 gate_on=0.00
+   cupxcake     5/50 gate_on=0.00
+   cupxstir     3/50 gate_on=0.00
+   cupxsmash    4/50 gate_on=0.00
+   boxxcake     20/50 gate_on=0.00
+   boxxstir     35/50 gate_on=0.00
+   boxxsmash    7/50 gate_on=0.00
+   mugxcake     28/50 gate_on=0.00
+   mugxstir     35/50 gate_on=0.00
+   mugxsmash    16/50 gate_on=0.00
+   (30s)
+[recomposition] method=mono seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_mono_s2.pt)
+   L_cup        26/50
+   L_box        48/50
+   L_mug        49/50
+   R_cake       28/50
+   R_stir       50/50
+   R_smash      47/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     0/50
+   boxxstir     0/50
+   boxxsmash    5/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (21s)
+[recomposition] method=twin seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_twin_s2.pt)
+   L_cup        39/50
+   L_box        47/50
+   L_mug        50/50
+   R_cake       27/50
+   R_stir       49/50
+   R_smash      48/50
+   cupxcake     0/50
+   cupxstir     0/50
+   cupxsmash    0/50
+   boxxcake     3/50
+   boxxstir     0/50
+   boxxsmash    0/50
+   mugxcake     0/50
+   mugxstir     0/50
+   mugxsmash    0/50
+   (30s)
+[recomposition] method=skillvla seed=2 train=['L_cup', 'L_box', 'L_mug', 'R_cake', 'R_stir', 'R_smash'] frames=0 (eval-only: recomposition_all_skillvla_s2.pt)
+   L_cup        24/50 gate_on=0.00
+   L_box        47/50 gate_on=0.00
+   L_mug        50/50 gate_on=0.00
+   R_cake       33/50 gate_on=0.00
+   R_stir       50/50 gate_on=0.00
+   R_smash      50/50 gate_on=0.00
+   cupxcake     16/50 gate_on=0.00
+   cupxstir     29/50 gate_on=0.00
+   cupxsmash    20/50 gate_on=0.00
+   boxxcake     21/50 gate_on=0.00
+   boxxstir     45/50 gate_on=0.00
+   boxxsmash    29/50 gate_on=0.00
+   mugxcake     23/50 gate_on=0.00
+   mugxstir     42/50 gate_on=0.00
+   mugxsmash    40/50 gate_on=0.00
+   (27s)
+wrote /home/mars/Desktop/sunianbing/skillvla_repro/scripts/../results/recomposition.json

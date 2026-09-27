@@ -1,0 +1,9 @@
+# Python 3.10. Install torch from the CUDA 12.8 index first (RTX 50-series needs cu128):
+#   uv pip install --python .venv/bin/python torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+#   uv pip install --python .venv/bin/python -r requirements.txt
+torch==2.7.1
+numpy==2.2.6
+matplotlib==3.10.9
+pytest==9.1.1
+pyyaml==6.0.3
+rich==15.0.0

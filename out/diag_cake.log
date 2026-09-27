@@ -1,0 +1,24 @@
+  step 5000/20000 loss=1.1692 bc=0.0725 l_on=0.0730 l_off=0.0725 y_frac=0.4258 gate_frac=0.0000 l_disc=0.8022 l_prior=0.2405 (360s)
+  step 10000/20000 loss=1.4368 bc=0.0435 l_on=0.0433 l_off=0.0435 y_frac=0.6445 gate_frac=0.0000 l_disc=1.1197 l_prior=0.2218 (720s)
+  step 15000/20000 loss=0.7439 bc=0.0379 l_on=0.0385 l_off=0.0379 y_frac=0.1719 gate_frac=0.0000 l_disc=0.4602 l_prior=0.1971 (1081s)
+  step 20000/20000 loss=0.8776 bc=0.0215 l_on=0.0218 l_off=0.0215 y_frac=0.2812 gate_frac=0.0000 l_disc=0.6491 l_prior=0.1631 (1440s)
+ep00 ok=False t=100 eeR=[0.64 0.84 0.29] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.64, 0.78])} events=[]
+ep01 ok=False t=100 eeR=[0.6  0.54 0.11] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.6 , 0.58])} events=[]
+ep02 ok=False t=100 eeR=[0.66 0.61 0.31] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.65, 0.61])} events=[]
+ep03 ok=False t=100 eeR=[0.66 0.57 0.34] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.65, 0.62])} events=[]
+ep04 ok=False t=100 eeR=[0.8  0.52 0.37] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.79, 0.5 ])} events=[]
+ep05 ok=False t=100 eeR=[0.64 0.4  0.1 ] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.6 , 0.48])} events=[]
+ep06 ok=False t=100 eeR=[0.72 0.6  0.36] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.69, 0.54])} events=[]
+ep07 ok=False t=100 eeR=[0.83 0.63 0.1 ] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.89, 0.64])} events=[]
+ep08 ok=False t=100 eeR=[0.76 0.28 0.41] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.77, 0.36])} events=['t28:cake+@[0.77 0.7 ]', 't53:cake-@[0.78 0.42]']
+ep09 ok=False t=100 eeR=[0.88 0.35 0.17] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.9 , 0.33])} events=[]
+ep10 ok=False t=100 eeR=[0.75 0.71 0.11] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.72, 0.69])} events=[]
+ep11 ok=True t=51 eeR=[0.63 0.41 0.12] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.65, 0.38])} events=['t28:cake+@[0.77 0.62]', 't51:cake-@[0.63 0.41]']
+ep12 ok=False t=100 eeR=[0.77 0.41 0.09] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.71, 0.38])} events=[]
+ep13 ok=False t=100 eeR=[0.86 0.43 0.37] eeL=[0.2  0.15 0.61] recep={'container': array([0.88, 0.45])} events=[]
+ep14 ok=False t=100 eeR=[0.63 0.4  0.42] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.61, 0.43])} events=[]
+ep15 ok=False t=100 eeR=[0.79 0.74 0.42] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.82, 0.73])} events=[]
+ep16 ok=False t=100 eeR=[0.81 0.44 0.1 ] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.84, 0.44])} events=[]
+ep17 ok=False t=100 eeR=[0.63 0.4  0.31] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.63, 0.36])} events=[]
+ep18 ok=False t=100 eeR=[0.87 0.7  0.1 ] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.86, 0.71])} events=[]
+ep19 ok=False t=100 eeR=[0.74 0.57 0.11] eeL=[0.2  0.15 0.6 ] recep={'container': array([0.73, 0.55])} events=[]
